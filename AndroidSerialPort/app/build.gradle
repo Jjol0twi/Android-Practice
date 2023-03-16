@@ -5,16 +5,25 @@ plugins {
 
 android {
     namespace 'com.example.androidserialport'
-    compileSdk 33
+    compileSdk build_versions.compile_sdk
+    ndkVersion build_versions.ndk_version
 
     defaultConfig {
         applicationId "com.example.androidserialport"
-        minSdk 25
-        targetSdk 33
+        minSdk build_versions.min_sdk
+        targetSdk build_versions.target_skd
         versionCode 1
-        versionName "1.0"
+        versionName build_versions.version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            ndkBuild {
+                cppFlags ''
+            }
+        }
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
     }
 
     buildTypes {
@@ -30,15 +39,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    viewBinding {
+        enabled = true
+    }
+    externalNativeBuild {
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
+        }
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation deps.core
+    implementation deps.appcompat
+    implementation deps.material
+    implementation deps.layouts.constraint
+    testImplementation deps.junit
+    androidTestImplementation atsl.ext_junit
+    androidTestImplementation espresso.core
 }
