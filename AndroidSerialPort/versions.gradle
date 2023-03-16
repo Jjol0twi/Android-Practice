@@ -1,0 +1,39 @@
+ext.deps = [:]
+def versions = [:]
+versions.kotlin = '1.8.0'
+versions.core = '1.8.0'
+versions.kotlin = '1.8.0'
+versions.appcompat = '1.6.1'
+versions.material = '1.8.0'
+versions.constraint = '2.1.4'
+versions.junit = '4.13.2'
+versions.atsl_junit='1.1.5'
+versions.espresso='3.5.1'
+ext.versions = versions
+
+def build_versions = [:]
+build_versions.compile_sdk = 33
+build_versions.min_sdk = 23
+build_versions.target_sdk = 25
+build_versions.version = '0.1'
+build_versions.ndk_version = '23.2.8568313'
+ext.build_versions = build_versions
+
+def deps = [:]
+deps.core = "androidx.core:core-ktx:${versions.core}"
+deps.appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
+deps.material = "com.google.android.material:material:${versions.material}"
+deps.junit = "junit:junit:${versions.junit}"
+
+def layouts = [:]
+layouts.constraint = "androidx.constraintlayout:constraintlayout:${versions.constraint}"
+deps.layouts = layouts
+
+def atsl = [:]
+atsl.ext_junit = "androidx.test.ext:junit:${versions.atsl_junit}"
+ext.atsl=atsl
+
+def espresso=[:]
+espresso.core = "androidx.test.espresso:espresso-core:${versions.espresso}"
+ext.espresso=espresso
+ext.deps = deps
