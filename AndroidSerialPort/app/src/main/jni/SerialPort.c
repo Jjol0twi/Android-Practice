@@ -73,7 +73,7 @@ static speed_t getBaudrate(jint baudrate)
  * Method:    open
  * Signature: (Ljava/lang/String;II)Ljava/io/FileDescriptor;
  */
-JNIEXPORT jobject JNICALL Java_android_1serialport_1api_SerialPort_open
+JNIEXPORT jobject JNICALL Java_com_example_androidserialport_android_1serialport_1api_SerialPort_open   // package 경로 변경 자세한 것은 readme.md
   (JNIEnv *env, jclass thiz, jstring path, jint baudrate, jint flags)
 {
 	int fd;
@@ -149,7 +149,7 @@ JNIEXPORT jobject JNICALL Java_android_1serialport_1api_SerialPort_open
  * Method:    close
  * Signature: ()V
  */
-JNIEXPORT void JNICALL Java_android_1serialport_1api_SerialPort_close
+JNIEXPORT void JNICALL Java_com_example_androidserialport_android_1serialport_1api_SerialPort_close // package 경로 변경 자세한 것은 readme.md
   (JNIEnv *env, jobject thiz)
 {
 	jclass SerialPortClass = (*env)->GetObjectClass(env, thiz);
@@ -164,4 +164,3 @@ JNIEXPORT void JNICALL Java_android_1serialport_1api_SerialPort_close
 	LOGD("close(fd = %d)", descriptor);
 	close(descriptor);
 }
-
