@@ -18,7 +18,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-TARGET_PLATFORM := android-25
+TARGET_PLATFORM := android-23	# Changed android api
 LOCAL_MODULE    := serial_port
 LOCAL_SRC_FILES := SerialPort.c
 LOCAL_LDLIBS    := -llog
