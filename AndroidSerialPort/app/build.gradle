@@ -47,6 +47,13 @@ android {
             path file('src/main/jni/Android.mk')
         }
     }
+    sourceSets {
+        main {
+            jni {
+                srcDirs 'src/main/jni'
+            }
+        }
+    }
 }
 
 dependencies {
