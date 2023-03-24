@@ -30,12 +30,8 @@ public class SerialPort {
 
 	private static final String TAG = "SerialPort";
 
-	/*
-	 * Do not remove or rename the field mFd: it is used by native method close();
-	 */
-	private FileDescriptor mFd;
-	private FileInputStream mFileInputStream;
-	private FileOutputStream mFileOutputStream;
+	private final FileInputStream mFileInputStream;
+	private final FileOutputStream mFileOutputStream;
 
 	public SerialPort(File device, int baudrate, int flags) throws SecurityException, IOException {
 
@@ -58,7 +54,10 @@ public class SerialPort {
 			}
 		}
 
-		mFd = open(device.getAbsolutePath(), baudrate, flags);
+		/*
+		 * Do not remove or rename the field mFd: it is used by native method close();
+		 */
+		FileDescriptor mFd = open(device.getAbsolutePath(), baudrate, flags);
 		if (mFd == null) {
 			Log.e(TAG, "native open returns null");
 			throw new IOException();
