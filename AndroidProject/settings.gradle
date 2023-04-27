@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "AndroidProject"
-include ':app', ':coroutine', ':serialport'
-apply from: 'versions.gradle'
-
+include ':app'
+include ':coroutine'
+include ':serialport'
