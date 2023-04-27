@@ -1,0 +1,62 @@
+// versions
+def versions = [:]
+versions.corektx = "1.9.0"
+versions.appcompat = "1.6.0"
+versions.kotlin = "1.7.21"
+versions.navigation = "2.5.3"
+versions.material = "1.8.0"
+versions.constraintlayout = "2.1.4"
+versions.coroutine = "1.3.9"
+versions.junit = "4.13.2"
+versions.atsl_junit = "1.1.5"
+versions.espresso = "3.5.1"
+ext.versions = versions
+// build관련 version
+def buildVersions = [:]
+buildVersions.compileSdk = 33
+buildVersions.minSdk = 25
+buildVersions.targetSdk = 33
+buildVersions.code = 1
+buildVersions.name = "0.0.1"
+ext.buildVersions = buildVersions
+// dependencies
+ext.deps = [:]
+def deps = [:]
+deps.core_ktx = "androidx.core:core-ktx:${versions.corektx}"
+deps.appcompat = "androidx.appcompat:appcompat:${versions.appcompat}"
+deps.material = "com.google.android.material:material:${versions.material}"
+deps.junit = "junit:junit:${versions.junit}"
+
+
+// navigation
+def navigation = [:]
+//navigation.runtime = "androidx.navigation:navigation-runtime:${versions.navigation}"
+navigation.runtime_ktx = "androidx.navigation:navigation-runtime-ktx:${versions.navigation}"
+//navigation.fragment = "androidx.navigation:navigation-fragment:${versions.navigation}"
+navigation.fragment_ktx = "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+//navigation.ui = "androidx.navigation:navigation-ui:${versions.navigation}"
+navigation.ui_ktx = "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+navigation.testing = "androidx.navigation:navigation-testing:${versions.navigation}"
+navigation.safe_args_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:${versions.navigation}"
+deps.navigation = navigation
+
+// navigation
+def layouts = [:]
+layouts.constraint = "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+deps.layouts = layouts
+
+// kotlin coroutine
+def coroutine = [:]
+coroutine.kotlinx = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutine}"
+deps.coroutine= coroutine
+
+// android test libraries
+def atsl = [:]
+atsl.ext_junit = "androidx.test.ext:junit:${versions.atsl_junit}"
+deps.atsl = atsl
+
+def espresso = [:]
+espresso.core = "androidx.test.espresso:espresso-core:${versions.espresso}"
+deps.espresso = espresso
+
+ext.deps = deps
