@@ -8,7 +8,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidProject">
         <activity
-            android:name=".Main"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
