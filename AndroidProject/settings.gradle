@@ -16,3 +16,4 @@ rootProject.name = "AndroidProject"
 include ':app'
 include ':coroutine'
 include ':serialport'
+include ':service'

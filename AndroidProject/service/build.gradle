@@ -1,0 +1,54 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.service'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.service"
+        minSdk buildVersions.minSdk
+        targetSdk buildVersions.targetSdk
+        versionCode buildVersions.code
+        versionName buildVersions.name
+        
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+//    fileTree(dir: ['libs','jni'], includes: ['*.so'])
+    implementation deps.core_ktx
+    implementation deps.appcompat
+    implementation deps.material
+    implementation deps.layouts.constraint
+    // Navigtaion
+    implementation deps.navigation.fragment_ktx
+    implementation deps.navigation.runtime_ktx
+    implementation deps.navigation.ui_ktx
+    androidTestImplementation deps.navigation.testing
+    testImplementation deps.navigation.testing
+    // kotlin coroutine
+    implementation deps.coroutine.kotlinx
+
+    // test libaraies
+    testImplementation deps.junit
+    androidTestImplementation deps.atsl.ext_junit
+    androidTestImplementation deps.espresso.core
+}
