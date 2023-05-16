@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <service android:name=".services.FirstSercie"
-            android:description="innail board sensor communication"
+            android:description="test1"
+            android:enabled="true"
+            android:exported="false"
             />
     </application>
 
