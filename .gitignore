@@ -1,4 +1,4 @@
-### Mac OS ###
+### MacOS ###
 # General
 .DS_Store
 .AppleDouble
@@ -25,6 +25,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### MacOS Patch ###
+# iCloud generated files
+*.icloud
 
 ### Windows ###
 # Windows thumbnail cache files
