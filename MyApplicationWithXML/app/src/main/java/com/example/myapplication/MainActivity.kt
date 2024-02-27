@@ -11,11 +11,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
-        binding.mainTxt.text = "binding.아까 layout에 설정한 id"
-        with(binding){
-            mainTxt.text = ""
-            subTxt.text=""
-        }
         setContentView(binding.root)
     }
 }

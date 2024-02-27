@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.myapplication.databinding.FragmentBlankBinding
 
 class BlankFragment : Fragment() {
-    private var _binding : FragmentBlankBinding? = null
+    private var _binding: FragmentBlankBinding? = null
     private val binding get() = _binding!!
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +18,12 @@ class BlankFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding=FragmentBlankBinding.inflate(inflater,container,false)
+        _binding = FragmentBlankBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
