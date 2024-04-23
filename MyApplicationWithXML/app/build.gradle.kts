@@ -58,5 +58,5 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 //  retrofit2
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
-    implementation("com.squareup.retrofit2:converter-gson") // gson converter
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0") // gson converter
 }
