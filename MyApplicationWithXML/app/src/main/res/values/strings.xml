@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyApplicationWithXML</string>
+    <string name="sign_in">로그인</string>
 </resources>
