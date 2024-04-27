@@ -72,5 +72,6 @@ dependencies {
 // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
     implementation("com.google.firebase:firebase-auth-ktx") // Add the dependency for the Firebase Authentication library
-
+// naver login
+    implementation("com.navercorp.nid:oauth:5.9.1") // jdk 11
 }
