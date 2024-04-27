@@ -2,13 +2,13 @@ package com.ihateham.androidsampleproject.presentation.signin
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.ihateham.androidsampleproject.databinding.ActivitySigninBinding
+import com.ihateham.androidsampleproject.databinding.ActivitySignInBinding
 
-class SigninActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySigninBinding
+class SignInActivity : AppCompatActivity() {
+    private lateinit var binding: ActivitySignInBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySigninBinding.inflate(layoutInflater)
+        binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 }
