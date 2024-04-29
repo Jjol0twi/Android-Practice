@@ -11,4 +11,20 @@ class SignInActivity : AppCompatActivity() {
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+    private val oauthLoginCallback = object : OAuthLoginCallback {
+        override fun onSuccess() {
+            Log.i("success", "get access token(${NaverIdLoginSDK.getAccessToken()})")
+        }
+
+        override fun onFailure(httpStatus: Int, message: String) {
+            val errorCode = NaverIdLoginSDK.getLastErrorCode().code
+            val errorDescription = NaverIdLoginSDK.getLastErrorDescription()
+            Log.i("fail", "Naver Login Fail:$errorCode, errorDesc:$errorDescription")
+        }
+
+        override fun onError(errorCode: Int, message: String) {
+            onFailure(errorCode, message)
+        }
+    }
+
 }
