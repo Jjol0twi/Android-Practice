@@ -29,6 +29,28 @@ class SignInActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        initView()
+    }
+
+    private fun initView() = with(binding) {
+        logout.setOnClickListener {
+            NaverIdLoginSDK.logout()
+            googleSignInBtn
+        }
+        // google login button click event
+        googleSignInBtn.setOnClickListener {
+            googleLogin()
+        }
+        // naver login button click event
+        naverSignInBtn.setOnClickListener {
+            NaverIdLoginSDK.authenticate(this@SignInActivity, oauthLoginCallback)
+        }
+        // kakao login button click event
+        kakaoSignInBtn.setOnClickListener {
+            kakaoLogin()
+        }
+    }
     }
 
     private fun googleLogin() {
