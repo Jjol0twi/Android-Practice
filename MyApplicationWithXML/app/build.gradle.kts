@@ -67,10 +67,12 @@ dependencies {
 //  retrofit2
     implementation("com.squareup.retrofit2:retrofit:2.11.0")
     implementation("com.squareup.retrofit2:converter-gson:2.11.0") // gson converter
-// add the dependency for the Google Play services library and specify its version
-    implementation("com.google.android.gms:play-services-auth:21.1.0")
 // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:32.8.1"))
+// google login
+    implementation("com.firebaseui:firebase-ui-auth:8.0.2") // FirebaseUI for Firebase Auth
+    // keep gms version 20.7.0 beacuase 21.1.0 doesn't apply firebase ui login
+    implementation("com.google.android.gms:play-services-auth:20.7.0")  // add the dependency for the Google Play services library and specify its version
     implementation("com.google.firebase:firebase-auth-ktx") // Add the dependency for the Firebase Authentication library
 // naver login
     implementation("com.navercorp.nid:oauth:5.9.1") // jdk 11
