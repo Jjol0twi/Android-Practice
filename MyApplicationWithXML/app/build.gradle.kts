@@ -74,4 +74,7 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx") // Add the dependency for the Firebase Authentication library
 // naver login
     implementation("com.navercorp.nid:oauth:5.9.1") // jdk 11
+// kakao login
+    implementation("com.kakao.sdk:v2-user:2.20.1") // 카카오 로그인 API 모듈
+
 }
