@@ -18,6 +18,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.gms.common.SignInButton
         android:id="@+id/google_sign_in_btn"
         android:layout_width="190dp"
@@ -27,10 +35,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.navercorp.nid.oauth.view.NidOAuthLoginButton
         android:id="@+id/naver_sign_in_btn"
-        android:layout_width="183dp"
-        android:layout_height="45dp"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
         app:layout_constraintBottom_toTopOf="@id/kakao_sign_in_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,11 +47,10 @@
     <Button
         android:id="@+id/kakao_sign_in_btn"
         android:layout_width="183dp"
-        android:layout_height="45dp"
+        android:layout_height="50dp"
         android:layout_margin="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
