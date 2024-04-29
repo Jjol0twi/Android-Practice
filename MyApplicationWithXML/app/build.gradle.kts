@@ -1,8 +1,12 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")    // Add the Google services Gradle plugin
 }
+
+fun getKey(name: String): String = gradleLocalProperties(rootDir, providers).getProperty(name)
 
 android {
     namespace = "com.ihateham.androidsampleproject"
@@ -16,6 +20,12 @@ android {
         versionName = "0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "NAVER_CLIENT_ID", getKey("naver.client"))
+        buildConfigField("String", "NAVER_CLIENT_SECRET", getKey("naver.secret"))
+        buildConfigField("String", "NAVER_CLIENT_NAME", getKey("naver.applicationName"))
+        buildConfigField("String", "GOOGLE_WEB_CLIENT", getKey("google.webClient"))
+        manifestPlaceholders["KAKAO_NATIVE_KEY"] = getKey("kakao.native") as String
     }
 
     buildTypes {
@@ -40,6 +50,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 

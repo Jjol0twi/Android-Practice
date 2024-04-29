@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationWithXML"
         tools:targetApi="31">
+        <meta-data
+            android:name="kakao_native"
+            android:value="${KAKAO_NATIVE_KEY}" />
         <activity
             android:name=".presentation.signup.SignUpActivity"
             android:exported="false" />
