@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".SampleApplication"
         android:allowBackup="true"
@@ -14,9 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationWithXML"
         tools:targetApi="31">
+        <activity
+            android:name=".presentation.payment.PaymentActivity"
+            android:exported="false" />
+
         <meta-data
             android:name="kakao_native"
             android:value="${KAKAO_NATIVE_KEY}" />
+
         <activity
             android:name=".presentation.signup.SignUpActivity"
             android:exported="false" />
