@@ -63,6 +63,7 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.6.2")
 //  google material components
     implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.activity:activity:1.8.0")
 // testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -89,5 +90,7 @@ dependencies {
     implementation("com.navercorp.nid:oauth:5.9.1") // jdk 11
 // kakao login
     implementation("com.kakao.sdk:v2-user:2.20.1") // 카카오 로그인 API 모듈
+// toss payment
+    implementation("com.github.tosspayments:payment-sdk-android:0.1.15")
 
 }
