@@ -28,16 +28,8 @@ class SQLiteHelper(context: Context) :
         TODO("Not yet implemented")
     }
 
-    suspend fun <T> runInTransaction(block: suspend () -> T): T {
-        return withContext(databaseDispatcher) {
-            writableDatabase.beginTransaction()
-            try {
-                val result = block()
-                writableDatabase.setTransactionSuccessful()
-                result
-            } finally {
-                writableDatabase.endTransaction()
-            }
-        }
+    private fun createTable(){
+
     }
+
 }
