@@ -5,9 +5,11 @@ import com.ihateham.androidpractice.db.local.SQLiteRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 
-class SqliteViewModel(private val sqlite: SQLiteDao) : ViewModel() {
-    private val _readData: Flow<List<String>> = flowOf(listOf())
-    val readData: Flow<List<String>> get() = _readData
+class SqliteViewModel(private val sqlite: SQLiteRepository) : ViewModel() {
+
+    private var _selectData: MutableList<MutableList<String>>? = null
+    val selectData get() = _selectData
+
 
     fun addDB() {
 //        sqlite.insertData()
