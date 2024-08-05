@@ -8,11 +8,11 @@ import com.ihateham.androidpractice.db.local.SQLiteHelper
 import com.ihateham.androidpractice.db.local.SQLiteRepository
 
 class SqliteViewModelFactory(context: Context) : ViewModelProvider.Factory {
-    private val _SQLiteHelper = SQLiteHelper(context)   // 임시로
-    private val sqlite = SQLiteDaoImpl(_SQLiteHelper)
+    private val sqliteHelper = SQLiteHelper.getInstance(context)
+    private val sqliteRepo = SQLiteRepository(sqliteHelper, SQLiteDaoImpl(sqliteHelper))
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(SqliteViewModel::class.java)) {
-            return SqliteViewModel(sqlite) as T
+            return SqliteViewModel(sqliteRepo) as T
         } else {
             throw IllegalArgumentException("Not found main view model class")
         }
