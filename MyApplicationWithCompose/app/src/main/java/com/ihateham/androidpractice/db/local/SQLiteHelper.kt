@@ -23,15 +23,25 @@ class SQLiteHelper(context: Context) :
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        TODO("Not yet implemented")
+        createTable(db)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
     }
 
-    private fun createTable(){
-
+    private fun createTable(db: SQLiteDatabase?) {
+        try {
+            val sql = """
+                
+            """.trimIndent()
+            db?.execSQL(sql)
+        } catch (e: SQLiteConstraintException) {
+            Log.d("SQLITE", "SQLITE INIT FAILED : $e")
+        } catch (e: Exception) {
+            throw Exception("LOCAL DATABASE INIT FAILED : $e")
+        }
+        Log.d("SQLITE", "SQLITE INIT SUCCESS")
     }
 
 }
