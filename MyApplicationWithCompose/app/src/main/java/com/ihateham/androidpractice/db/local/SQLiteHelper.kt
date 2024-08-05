@@ -13,8 +13,9 @@ class SQLiteHelper(context: Context) :
     private val databaseDispatcher = Executors.newSingleThreadExecutor().asCoroutineDispatcher()
 
     companion object {
-        const val DATABASE_NAME = ""
-        const val DATABASE_VERSION = 0
+        const val DATABASE_NAME = "sqliteDatabase.db"
+        const val DATABASE_VERSION = 1
+
         private var instance: SQLiteHelper? = null
         fun getInstance(context: Context): SQLiteHelper = instance ?: synchronized(this) {
             instance ?: SQLiteHelper(context).also { instance = it }
