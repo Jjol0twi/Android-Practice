@@ -10,6 +10,7 @@ class SqliteViewModel(private val sqlite: SQLiteRepository) : ViewModel() {
     private var _selectData: MutableList<MutableList<String>>? = null
     val selectData get() = _selectData
 
+    val selectDataSize: Int get() = _selectData?.size ?: 0
 
     fun addDB() {
 //        sqlite.insertData()
