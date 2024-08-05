@@ -1,7 +1,6 @@
-package com.Ihateham.androidpractice.db.local
+package com.ihateham.androidpractice.db.local
 
 import android.content.ContentValues
-import android.database.Cursor
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 

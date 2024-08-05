@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.Ihateham.androidpractice"
+    namespace = "com.ihateham.androidpractice"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.Ihateham.androidpractice"
+        applicationId = "com.ihateham.androidpractice"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

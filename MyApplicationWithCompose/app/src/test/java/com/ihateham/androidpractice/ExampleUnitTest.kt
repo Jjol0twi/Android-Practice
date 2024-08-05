@@ -1,4 +1,4 @@
-package com.Ihateham.androidpractice
+package com.ihateham.androidpractice
 
 import org.junit.Test
 

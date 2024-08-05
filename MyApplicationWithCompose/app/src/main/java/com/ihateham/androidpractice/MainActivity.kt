@@ -1,4 +1,4 @@
-package com.Ihateham.androidpractice
+package com.ihateham.androidpractice
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,7 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.Ihateham.androidpractice.ui.theme.AndroidPracticeTheme
+import com.ihateham.androidpractice.ui.theme.AndroidPracticeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

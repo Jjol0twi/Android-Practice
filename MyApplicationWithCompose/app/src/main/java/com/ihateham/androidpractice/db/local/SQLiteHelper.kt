@@ -1,10 +1,11 @@
-package com.Ihateham.androidpractice.db.local
+package com.ihateham.androidpractice.db.local
 
 import android.content.Context
+import android.database.sqlite.SQLiteConstraintException
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import kotlinx.coroutines.asCoroutineDispatcher
-import kotlinx.coroutines.withContext
 import java.util.concurrent.Executors
 
 class SQLiteHelper(context: Context) :

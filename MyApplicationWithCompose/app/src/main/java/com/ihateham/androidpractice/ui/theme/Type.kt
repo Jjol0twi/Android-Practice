@@ -1,4 +1,4 @@
-package com.Ihateham.androidpractice.ui.theme
+package com.ihateham.androidpractice.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -1,9 +1,7 @@
-package com.Ihateham.androidpractice.presentation.sqlite
+package com.ihateham.androidpractice.presentation.sqlite
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.Ihateham.androidpractice.db.local.SQLiteDao
+import com.ihateham.androidpractice.db.local.SQLiteRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 

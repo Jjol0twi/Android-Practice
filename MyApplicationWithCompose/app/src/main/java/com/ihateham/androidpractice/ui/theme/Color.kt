@@ -1,4 +1,4 @@
-package com.Ihateham.androidpractice.ui.theme
+package com.ihateham.androidpractice.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
