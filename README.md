@@ -1,2 +1,2 @@
 # Android
-This is example of android project
+This is project is an Android example created by Jjol0twi(hongham)
